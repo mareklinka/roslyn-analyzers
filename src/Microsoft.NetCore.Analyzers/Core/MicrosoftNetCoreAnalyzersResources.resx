@@ -1164,4 +1164,13 @@
   <data name="MissHttpVerbAttributeDescription" xml:space="preserve">
     <value>All the methods that create, edit, delete, or otherwise modify data do so in the [HttpPost] overload of the method, which needs to be protected with the anti forgery attribute from request forgery. Performing a GET operation should be a safe operation that has no side effects and doesn't modify your persisted data.</value>
   </data>
+  <data name="MutableStructsShouldNotBeUsedForReadonlyFieldsTitle" xml:space="preserve">
+    <value>Certain readonly structs should not be used as readonly fields</value>
+  </data>
+  <data name="MutableStructsShouldNotBeUsedForReadonlyFieldsDescription" xml:space="preserve">
+    <value>Certain value types (e.g. SpinLock, GCHandle) are explicitly designed to be mutable. Declaring a field of such type as readonly might cause unintentional shadow copying by the compiler, leading to performance degradation or bugs.</value>
+  </data>
+  <data name="MutableStructsShouldNotBeUsedForReadonlyFieldsMessage" xml:space="preserve">
+    <value>Field {0} of type {1} should not be readonly.</value>
+  </data>
 </root>
