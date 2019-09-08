@@ -1186,6 +1186,6 @@
     <value>Certain value types (e.g. SpinLock, GCHandle) are explicitly designed to be mutable. Declaring a field of such type as readonly might cause unintentional shadow copying by the compiler, leading to performance degradation or bugs.</value>
   </data>
   <data name="MutableStructsShouldNotBeUsedForReadonlyFieldsMessage" xml:space="preserve">
-    <value>Field {0} of type {1} should not be readonly.</value>
+    <value>Field '{0}' of type '{1}' should not be readonly.</value>
   </data>
 </root>
